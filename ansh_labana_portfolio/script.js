@@ -576,8 +576,9 @@
      13. CURRENT YEAR
   ======================================= */
 
-  $$("[data-current-year]").forEach(element => {
-    element.textContent = new Date().getFullYear();
+  const currentYear = String(new Date().getFullYear());
+  $("#currentYear, [data-current-year]").forEach(element => {
+    element.textContent = currentYear;
   });
 
 
